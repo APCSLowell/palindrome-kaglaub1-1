@@ -46,7 +46,7 @@ public boolean palindrome(String word)
   return e.equals(x);
   return false;
 }
-public String reverse(String str)
+public String reverse(String sWord)
 {
   String e = new String("");
   for (int i = sWord.length(); i > 0; i--){
