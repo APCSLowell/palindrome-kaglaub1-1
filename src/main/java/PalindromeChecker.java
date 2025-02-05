@@ -59,7 +59,7 @@ public String onlyLetters(String sString){
   String e = new String("");
   for (int i = 0; i < sString.length(); i++){
     if (Character.isLetter(sString.charAt(i))){
-      e += toLowerCase(sString.substring(i, i+1));
+      e += (sString.substring(i, i+1)).toLowerCase();
     }
   }
   return e;
