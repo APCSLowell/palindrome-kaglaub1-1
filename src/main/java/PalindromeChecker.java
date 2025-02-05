@@ -43,6 +43,8 @@ public boolean palindrome(String word)
   String e = new String(word.substring(0, (int)(word.length()/2)));
   String x = new String(word.substring((int)(word.length()/2)+1));
   x = reverse(x);
+  e = onlyLetters(e);
+  x = onlyLetters(x);
   return e.equals(x);
 }
 public String reverse(String sWord)
@@ -50,6 +52,15 @@ public String reverse(String sWord)
   String e = new String("");
   for (int i = sWord.length(); i > 0; i--){
     e += sWord.substring(i-1, i);
+  }
+  return e;
+}
+public String onlyLetters(String sString){
+  String e = new String("");
+  for (int i = 0; i < sString.length(); i++){
+    if (Character.isLetter(sString.charAt(i))){
+      e += toLowerCase(sString.substring(i, i+1));
+    }
   }
   return e;
 }
