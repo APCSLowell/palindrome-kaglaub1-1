@@ -40,11 +40,13 @@ public boolean palindrome(String word)
   if (word.equals("")){
     return true;
   }
+  word = onlyLetters(word);
   String e = new String(word.substring(0, (int)(word.length()/2)));
+  if (word.length() % 2 == 0){
+    String x = new String(word.substring((int)(word.length()/2)));
+  }
   String x = new String(word.substring((int)(word.length()/2)+1));
   x = reverse(x);
-  e = onlyLetters(e);
-  x = onlyLetters(x);
   return e.equals(x);
 }
 public String reverse(String sWord)
